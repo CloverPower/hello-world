@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+  <meta charset="UTF-8">
+ 
+<title>Using Conditional Statements</title>
+
+<link href="site.css" rel="stylesheet">
+
+<script>
+var luckyNumber = prompt('What is your luckyNumber?', "");
+
+// convert the string to a number and assign it to the variable
+luckyNumber = parseInt(luckyNumber);
+
+//now if the input is not a number, tell the user to enter a  number
+if (isNaN(luckyNumber))
+   {
+     luckyNumber = prompt('Please tell me your lucky number!', "");
+    }
+</script>
+
+</head>
+
+
+<body>
+
+<div class="wrapper">
+  <header>
+    JAVASCRIPT <span class="amp">&amp;</span> jQUERY: THE&nbsp;MISSING&nbsp;MANUAL
+  </header>
+
+  <div class="content">
+  
+  <div class="main">
+      <h1>Using Conditional Statements</h1>
+ 
+     <script>
+	if (luckyNumber == 7)
+	
+	  {  //change the text to red . Provide an id for the paragraph and use it in the next
+	     //line of code
+	 	  
+	     document.write("<p  id=text>Hey, 7 is my luckly number, too! </p>");
+	     document.getElementById("text").style.color = "#ff0000";
+	  }
+	 
+
+	  else if(luckyNumber == 13 || luckyNumber == 24)
+	   
+	   { //change the color to green and include the bold tag, <b>.
+          document.write("<p id=secondText><b> Wooh,"  + luckyNumber + "? That's an unlucky number!</b></p>");
+		  document.getElementById("secondText").style.color = "#00ff00";
+	   }
+	 
+	  else
+	    { 
+		   document.write("<p> The number " + luckyNumber + " is lucky for you!</p>");
+		}
+
+    </script> 
+
+    </div>
+ 
+      </div>
+ 
+     <footer>
+   <p>JavaScript &amp; jQuery: The Missing Manual, 3rd Edition, by <a href="http://sawmac.com/">David McFarland</a>. Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>
+ 
+ </footer>
+
+</div>
+
+</body>
+
+</html>
